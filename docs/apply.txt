@@ -1,0 +1,7 @@
+The apply tactic applies a theorem or hypothesis whose conclusion matches the current goal.
+
+If the current goal is Q and we have h : P → Q, then:
+
+apply h
+
+changes the goal from Q to P.

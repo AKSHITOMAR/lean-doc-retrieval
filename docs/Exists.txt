@@ -1,0 +1,7 @@
+Exists represents an existential proposition.
+
+∃ x, P x means that there exists some x for which P x is true.
+
+An existential proof can provide a witness and then prove the property for that witness.
+
+The notation ⟨witness, proof⟩ can be used to construct an existential proof.

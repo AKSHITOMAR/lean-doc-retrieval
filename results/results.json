@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "concept": "And",
+    "problem": "Given proofs of P and Q, prove P ∧ Q.",
+    "without_documentation": {
+      "proof": "def P_and_Q (P Q : Prop) (hp : P) (hq : Q) : P ∧ Q :=\n  ⟨hp, hq⟩",
+      "passed": true,
+      "error": ""
+    },
+    "with_documentation": {
+      "proof": "def P_and_Q (P Q : Prop) (hP : P) (hQ : Q) : P ∧ Q :=\n  And.intro hP hQ",
+      "passed": true,
+      "error": ""
+    }
+  },
+  {
+    "id": 2,
+    "concept": "Or",
+    "problem": "Given a proof of P, prove P ∨ Q.",
+    "without_documentation": {
+      "proof": "theorem add_disjunction (P Q : Prop) (hP : P) : P ∨ Q := \n  Or.inl hP",
+      "passed": true,
+      "error": ""
+    },
+    "with_documentation": {
+      "proof": "theorem proof_of_disjunction (P Q : Prop) (hp : P) : P ∨ Q :=\n  Or.inl hp",
+      "passed": true,
+      "error": ""
+    }
+  },
+  {
+    "id": 3,
+    "concept": "Exists",
+    "problem": "Given a natural number n, prove that there exists a natural number equal to n.",
+    "without_documentation": {
+      "proof": "import Nat\n\ntheorem exists_natural_eq (n : Nat) : ∃ m : Nat, m = n := \n  ⟨n, rfl⟩",
+      "passed": false,
+      "error": ""
+    },
+    "with_documentation": {
+      "proof": "theorem exists_nat_eq (n : Nat) : ∃ m : Nat, m = n := by\n  use n\n  rfl",
+      "passed": false,
+      "error": ""
+    }
+  },
+  {
+    "id": 4,
+    "concept": "intro",
+    "problem": "Prove that P → P.",
+    "without_documentation": {
+      "proof": "theorem P_implies_P (P : Prop) : P → P :=\nbegin\n  intro h,\n  exact h,\nend",
+      "passed": false,
+      "error": ""
+    },
+    "with_documentation": {
+      "proof": "theorem id_prop (P : Prop) : P → P := by\n  intro h\n  exact h",
+      "passed": true,
+      "error": ""
+    }
+  },
+  {
+    "id": 5,
+    "concept": "apply",
+    "problem": "Given h1 : P → Q and h2 : P, prove Q.",
+    "without_documentation": {
+      "proof": "theorem implication_intro (P Q : Prop) (h1 : P → Q) (h2 : P) : Q :=\n  h1 h2",
+      "passed": true,
+      "error": ""
+    },
+    "with_documentation": {
+      "proof": "theorem imply_intro (P Q : Prop) (h1 : P → Q) (h2 : P) : Q :=\n  apply h1,\n  exact h2.",
+      "passed": false,
+      "error": ""
+    }
+  }
+]

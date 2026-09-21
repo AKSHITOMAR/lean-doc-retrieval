@@ -1,0 +1,9 @@
+The intro tactic introduces an assumption into the local context.
+
+For a goal P → Q, intro introduces a hypothesis P and changes the goal to Q.
+
+For example:
+
+theorem example (P : Prop) : P → P := by
+  intro h
+  exact h

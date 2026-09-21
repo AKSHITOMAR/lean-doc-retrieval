@@ -1,0 +1,6 @@
+Or represents a logical disjunction.
+
+P ∨ Q means that at least one of P or Q is true.
+
+The left tactic selects the P side of P ∨ Q.
+The right tactic selects the Q side.

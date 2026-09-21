@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "concept": "And",
+    "problem": "Given proofs of P and Q, prove P ∧ Q."
+  },
+  {
+    "id": 2,
+    "concept": "Or",
+    "problem": "Given a proof of P, prove P ∨ Q."
+  },
+  {
+    "id": 3,
+    "concept": "Exists",
+    "problem": "Given a natural number n, prove that there exists a natural number equal to n."
+  },
+  {
+    "id": 4,
+    "concept": "intro",
+    "problem": "Prove that P → P."
+  },
+  {
+    "id": 5,
+    "concept": "apply",
+    "problem": "Given h1 : P → Q and h2 : P, prove Q."
+  }
+]

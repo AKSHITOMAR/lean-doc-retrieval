@@ -1,0 +1,9 @@
+And represents a logical conjunction.
+
+A proposition P ∧ Q means that both P and Q are true.
+
+In a proof of P ∧ Q, the constructor tactic can create two goals:
+1. P
+2. Q
+
+These goals can be proved separately using the available hypotheses.
